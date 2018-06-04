@@ -22,6 +22,7 @@ Ubuntu 16.04 x64 + VMware Workstation 14 Player
 - __python-empy__
 - __python-numpy__，__python-toml__：程序提示用 pip 方式安装，apt-get 实测也可以。如果 pip 报大段红字错误可以用 apt-get，貌似是一个 Linux bug。
 - __catkin__
+- __unzip__
 
 ## 编译
 
@@ -36,7 +37,7 @@ make aerofc-v1_default
 
 ```bash
 sudo apt-get update
-sudo apt-get install git cmake gcc-arm-none-eabi genromfs python-jinja2 python-empy python-numpy python-toml catkin
+sudo apt-get install git cmake gcc-arm-none-eabi genromfs python-jinja2 python-empy python-numpy python-toml catkin unzip
 mkdir -p PX4
 cd PX4
 git clone https://github.com/PX4/Firmware.git
