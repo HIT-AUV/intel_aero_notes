@@ -10,7 +10,7 @@ Ubuntu 16.04 x64 + VMware Workstation 14 Player
 
 ## 编译需求
 
-测试环境不是干净的 Ubuntu 16.04，如果发现有遗漏请补充。仅列举原版 Ubuntu 16.04 不包含的部分。
+测试环境不是干净的 Ubuntu 16.04，如果发现有遗漏请补充。仅列举原版 Ubuntu 16.04 不包含的部分。在 Linux Subsystem on Windows 10 - Ubuntu 16.04 也编译成功。
 
 因为 Ubuntu 源速度问题，建议使用国内源，比如：[清华大学开源软件镜像站 - Ubuntu](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)。
 
@@ -22,7 +22,7 @@ Ubuntu 16.04 x64 + VMware Workstation 14 Player
 - __python-empy__
 - __python-numpy__，__python-toml__：程序提示用 pip 方式安装，apt-get 实测也可以。如果 pip 报大段红字错误可以用 apt-get，貌似是一个 Linux bug。
 - __catkin__
-- __unzip__
+- __unzip__，__GCC__，__G++__：Linux Subsystem on Windows 10 可能没有这些部件。
 
 ## 编译
 
@@ -37,7 +37,7 @@ make aerofc-v1_default
 
 ```bash
 sudo apt-get update
-sudo apt-get install git cmake gcc-arm-none-eabi genromfs python-jinja2 python-empy python-numpy python-toml catkin unzip
+sudo apt-get install git cmake gcc-arm-none-eabi genromfs python-jinja2 python-empy python-numpy python-toml catkin unzip gcc g++
 mkdir -p PX4
 cd PX4
 git clone https://github.com/PX4/Firmware.git
